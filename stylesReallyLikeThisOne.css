@@ -1,0 +1,501 @@
+* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
+	box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+}
+
+/* Body */
+
+body {
+	position:absolute;
+	top:0;
+	margin:0;
+}
+
+.landingPageSection {
+	position:relative;
+	top:0;
+	left:0;
+}
+
+/* Section includes: Landing Page -Home - Navagation Bar -Video Background */
+#Home  {
+	position:relative;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:700px;
+}
+/* Navbar */
+.Navbar {
+	overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+	background-color:rgba(0, 0, 0, 0.75); /* This colors the navbar black */
+	position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+	top: 0; /* This ensures no space is displayed above the navbar */
+	width: 100%; /* This makes the navbar span the entire width of the page */
+	z-index: 1; /*This ensures other elements don't display over the navbar */
+}
+/* Navbar text */
+.Navbar a {
+	float: left; /* This specifies that the text floats on the left on the navbar */
+	display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+	color: white; /* This is the font color for text on our navbar */
+	padding: 14px 16px; /* This adds padding around our text */
+	text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+	font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
+	font-size: 20px; /* This specifies the font size for text on our navbar */
+	text-align: center; /* This centers the text within its container */
+}
+/* Navbar hover effect */
+.Navbar a:hover {
+	background-color: rgb(163, 190, 248); /*  This defines the background color that will display when you hover over the text on the navbar */
+	color: black; /* This defines the font color that will display when you hover over the text on the navbar */
+	font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+}
+
+/* Navbar home button */
+#active  { /* The active selector styles a link */
+  background-color: rgb(215, 60, 230);  /* This specifies the background color behind the Home button on the navbar */ 
+}
+
+/* div that hold the video content */
+ #Video_Container_Sparkler {
+		position:relative;
+top:7%;
+		width:100vw;
+		height:100vh;
+		margin:0;
+		z-index:-1;
+}
+
+
+/* Video */
+#Sparkler {
+	position: relative;
+	top:0;
+	position: fixed; /* This fixes our video to the page  */
+	right: 0; /* This ensures no space between the edge of the video and the edge of the page */
+	bottom: 0; /* This ensures no space between the edge of the video and the edge of the page */
+	min-width: 100%; /* This ensures the video is displayed across the full width of the page */
+	filter:grayscale(37%);
+	z-index: -1;
+	}
+
+/* Text over the video */ 
+.Video_Text { 
+	position:relative;
+ /* This provides a semi-transparent background for the text to sit over */
+	 width: 100%;
+	height: 600px;
+ /* This adds padding around the text so that the background goes slightly beyond the text */
+	margin-top: 7%;
+	margin-bottom: 7%;
+}
+
+/*Intro Text of site name creatingthecode.com */
+
+.Video_Text  h1  {
+	text-align:center;
+    color:rgb(212, 60, 218);
+	font-size: 5em;
+	font-family: "Great Vibes", "Optima";
+	margin-bottom: 5px;
+	margin-top:5%;
+	text-shadow:3px 3px 3px white;
+	 -webkit-text-stroke-width: .25px; 
+	-webkit-text-stroke-color: rgb(120, 105, 218);
+cursor: pointer;
+	transform: scale (6em); 
+transition: 4s;
+	animation-name: introHeader;
+	animation-duration: 4s;
+	animation-timing-function: ease-in;
+}
+
+/*Intro Content -quote by Steve Jobs*/
+
+.Video_Text p {
+	margin-top:5%;
+	text-align:center;
+	font-Size: 22px;
+	color:cornsilk;
+	text-shadow:1px 1px 1px orchid;
+}
+
+/* animation for the Intro Header in Landing page section/home page */ 
+@keyframes introHeader {
+	from { transform: scale(1.5em);}
+	to {transform:scale(3.5em); }
+} 
+
+.Video_Text h1:hover {
+	font-weight:bold;
+	color:rgb(148, 116, 236);
+	text-shadow:2.5px 2.5px 2.5px rgb(114, 18, 111);
+	transition: transform  3.0s;
+	transform: scale(1.5);
+}
+/* grow effect on hover for the title content (creatingthecode.com and quote) */
+
+
+ 
+p:hover {
+	color: white;
+	transition:transform 1.5s; 
+	transform: scale(1.05);	
+} 
+ /* Table - this section covers the styling of the columns and rows within our table */
+.Column_1 {
+	float: left;  
+	width: 50%; /* This ensures one column takes up half the page width */ 
+	padding:3%; /* This ensures there is space between the top of the column and our headings */
+	height: 825px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
+	background-color:peachpuff; 
+}
+
+.Column_2 {
+	float: left;
+	width: 50%;
+    height: 825px;
+	background-color:rgb(51, 47, 45) ;
+	padding:3%;
+}
+
+.Column_3 {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 3.5%;
+	height: 825px;
+	background-color:rgb(51, 47, 45);
+}
+
+
+
+#albert_Einstein {
+    font-size:1.0em;
+    text-align:center;
+    color:white;
+    margin-top:0;
+}
+
+
+
+#PinkBeeMe {
+	width: 7%;
+	height: 7%;
+	margin-top: 1%
+}
+
+.Row:after { /* This inserts something after the content of selected elements */
+	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+}
+
+/* Heading 1 elements */
+.aboutMeSection .content {
+	padding:0% 4% 4% 4%;
+	
+}
+
+.aboutMeSection #Typing_Video {
+	width:100%;
+	height:35%;
+
+}
+
+#firstPart {
+	color:orchid;
+text-shadow:1px 1px 1px blue;
+}
+
+ul, li {
+	margin:0;
+	padding:0 0 0 7px;
+}
+
+.columnList1 {
+	width:50%;
+	float: left;
+	margin: 10px 0px 0 150px;
+	color:orchid;
+	font-weight:bold;
+	font-size:120%;
+	text-shadow:1.5px 1.5px 1.5px rgb(51,47,45)
+}
+.columnList2 {
+	margin:10px 0 0 100px;
+	color:orchid;
+	font-weight:bold;
+	font-size:120%;
+	text-shadow:1.5px 1.5px 1.5px rgb(51,47,45)
+}
+
+
+
+
+
+
+
+
+ .aboutMeSection h4 {
+	 margin-top:1%;
+	 margin-bottom:0%;
+	 padding-top:1%;
+	 padding-bottom:1%;
+ }
+  
+ .aboutMeSection #intro {
+	 color:rgb(51, 47, 45);
+ }
+
+h3 {
+    text-align: center;
+    font-family: "Optima";
+    color:peachpuff;
+    font-weight: bold;
+  text-shadow:1.25px 1.25px 1.25px slateblue;
+}
+.aboutMeSection #devil {
+	text-align:center;
+}
+
+.aboutMeSection #me {
+	margin-top:0%;
+	padding-top:2%;
+	text-align:center;
+	color:slateblue;
+	text-shadow:1.5px 1.5px 1.5px orchid;
+}
+
+.aboutMeSection span {
+	font-size:1.5em;
+	font-variant:all-small-caps;
+	letter-spacing:.5px;
+	  margin-top:1.75%;
+	  margin-bottom:0%;
+	  text-align:justify;
+}
+
+
+
+/* Paragraph elements */
+.aboutMeSection h4 {
+    text-align: justify;
+	font-family: Perpetua, Rockwell Extra Bold;
+	text-align: justify;
+	letter-spacing: 1px; /* This expands the text slightly */
+    font-size:1em;
+	font-family: "Trebuchet MS", Optima; 
+	text-align: center;
+	color: slateblue;
+	padding-top:0%;
+	padding-bottom:0%;
+	transform: scale 1.5; 
+	transition-delay: .75s;
+	transition: 3s;
+	text-align:justify;
+}
+
+.aboutMeSection h5 {
+	color:slateblue;
+	text-shadow: .75px .75px .75px slateblue;
+}
+
+#part_2 p {
+	position:relative;
+}
+
+#myself {
+	color:slateblue
+}
+q {
+	font-style: italic;
+	font-weight: bold;
+}
+
+.quote {
+	padding: 2% 2% 2% 2%;
+}	
+
+
+ #list_1  {
+
+	font-weight:bold;
+	 letter-spacing:1;
+	display:block;
+}
+#list_2 {
+display:block;
+float:left;
+}
+/* Center align elements - this embraces all centered text */
+center {
+	font-family: Perpetua, Rockwell Extra Bold;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Anchor elements */
+a {
+	color: fuchsia; /* We are ensuring all links are blue */
+}
+
+#Contact_Section .Column_1 {
+	padding:1.5%;
+}
+#devil {
+	font-size:2em;
+}
+
+ .Contact_Intro #Rotary_Img{
+	
+	width: 90%;
+	height :15%;
+	padding: 2%;
+	z-index:-1;
+}
+ .Contact_Intro h1 {
+	position:absolute;
+	top:60.25%;
+	left:60.5%;
+	font-size:2em;
+	text-align:center;
+	margin: 0;
+	color: rgb(233, 23, 222);
+	text-shadow:1.5px 1.5px 1.5px white;
+}
+
+#Contact_Section .Column_3 {
+	padding:2%;
+}
+
+/*.Contact_Intro:hover {
+
+}
+
+#Contact_Section h5 {
+	color: whitesmoke;
+	text-align:justify;
+}
+/* Image element*/
+center #linked_logo {
+	width: 50%;
+	margin-top:15%;
+}
+
+img { /* This rids our pictures of 75% of their color */
+	border-radius: 8px; /* gives images  slightly rounded edges */
+    max-width: 100%; 
+    height: 340px; 
+	margin-left: auto; /* use with margin-right: auto centers our images */
+    margin-right: auto;
+	display: block;	/* with block display we ensure  images can be centered */
+}
+
+/* Contact form */
+ form {
+	 position:relative;
+width:90%;
+
+padding: 1%;
+margin-bottom: 2%;
+	border-radius: 5px; 
+	background-color: #f2f2f2;
+font-family: "Trebuchet MS", Optima;
+
+}	
+
+
+
+
+
+input[type=text] { /* This covers the input sections of the contact form */
+	width: 100%;
+	padding: 12px;
+    border: 1px solid #ccc; /* We are setting a solid border and its colors */
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; /* This specifies how an element is resized; vertical allows the user to resize the height of the element */
+    font-family: Perpetua, Rockwell Extra Bold; 
+	font-size: 200%;
+}
+
+label {
+	font-size: 150%;
+}
+/* Submit button */
+input[type=submit] { /* This covers the submit button for the contact form */
+	background-color: cornflowerblue;
+	color: white;
+	font-weight: bold;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	font-family:Rockwell Extra Bold;
+	font-size: 200%;
+	margin-top:10%;
+}
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+	background-color: orchid; /* Makes the background turn white when hovered over */
+	margin-top: 10%;
+	color: white; /* Makes the font turn black when hovered over */
+	font-weight: bold; /* Makes the font bold when hovered over */
+	transform: scale(1.5); /* Makes the button increase 1.5 times in size */ 
+	transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds from start to finish */
+}
+
+/* Form elememt */
+
+
+/* Center align element hover effect */
+center:hover {
+	transition: transform 2s;
+	transform: scale(1.5);
+}
+
+
+h3:hover {
+    color:white;
+    font-weight: normal;
+    transition: transform 2s;
+    transform: scale(1.5);
+}
+
+/* Image element hover effects */
+ /*img:hover {
+	  /* Brings back most of the image's color when hovered over */
+ /*   transition: transform 1.5s;
+	transform: scale(1.25);
+}
+
+/* Footer element */
+footer {
+	padding: 2%;
+	background-color:white;
+}
+
+.BeePic_and_Quote q {
+	font-size: 1.15em;
+	padding: 2%;
+}
+.BeePic_and_Quote:hover {
+    color:slateblue;
+    transition:transform 1.5s;
+    transform: scale(1.25);
+}
+
+.BottomRow #justalittlebitmore p{
+	background-color:brown;
+	color:peachpuff;
+}
